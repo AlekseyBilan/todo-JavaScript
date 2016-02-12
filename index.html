@@ -2,23 +2,49 @@
 <html lang="en" data-framework="javascript">
 <head>
     <meta charset="utf-8">
-    <title>Todo MVC javascript</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>TodoMVC</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <section class="todoapp">
     <header class="header">
-        <h1>todo list</h1>
-        <input class="new-todo" placeholder="What needs to be done?" autofocus>
+        <input class="toggle-all" type="checkbox" title="toggle all todo">
+        <h1>new todo list</h1>
     </header>
-    <section class="main">
-        <input class="toggle-all" type="checkbox">
-        <label for="toggle-all">Mark all as complete</label>
-        <ul class="todo-list wrapper-todo-list"></ul>
+    <section class="create">
+        <input class="new-todo" placeholder="Title" autofocus>
+        <input class="new-description" placeholder="Description">
+        <button class="save" title="Save new todo it to list">Save</button>
     </section>
+    <section class="main">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul class="todo-list"></ul>
+    </section>
+    <footer class="footer">
+        <span class="todo-count"></span>
+        <ul class="filters">
+            <li>
+                <a href="#/" class="selected">All</a>
+            </li>
+            <li>
+                <a href="#/active">Active</a>
+            </li>
+            <li>
+                <a href="#/completed">Completed</a>
+            </li>
+        </ul>
+        <button class="clear-completed">Clear completed</button>
+    </footer>
 </section>
 <footer class="info">
     <p>Double-click to edit a todo</p>
 </footer>
+<script src="js/helpers.js"></script>
+<script src="js/store.js"></script>
+<script src="js/model.js"></script>
+<script src="js/template.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
