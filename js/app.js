@@ -14,7 +14,7 @@
         this.controller = new app.Controller(this.model, this.view);
     }
 
-    var todo = new Todo('todos-vanillajs');
+    var todo = new Todo('todo-list-js');
 
     function setView() {
         todo.controller.setView(document.location.hash);
